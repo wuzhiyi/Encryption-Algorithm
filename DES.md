@@ -28,3 +28,5 @@ Key mixing--the result is combined with a subkey using an XOR operation. 16 48-b
 After mixing in the subkey, the block is divided into eight 6-bit pieces before processing by the S-boxes, or substitution boxes. Each of the eight S-boxes replaces its six input bits with four output bits according to a non-linear transformation, provided in the form of a lookup table. The S-boxes provide the core of the security of DES--without them, the cipher would be linear, and trivially breakable.</br>
 ###Straight P-Box
 Finally, the 32 outputs from the S-boxes are rearranged according to a fixed permutation, the P-box. This is designed so that, after permutation, each S-box's output bits are spread across 4 different S boxes in the next round.</br>
+</br>
+back to [Encryption-Algorithm](https://github.com/wuzhiyi/Encryption-Algorithm)</br>
