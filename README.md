@@ -1,5 +1,6 @@
 # Encryption-Algorithm
 ####Additive Cipher
+* [Brute Force](https://github.com/wuzhiyi/Encryption-Algorithm/blob/master/Brute-Force-Additive-Cipher.c)</br>
 
 ####Data Encryption Standard
 * [DES.md](https://github.com/wuzhiyi/Encryption-Algorithm/blob/master/DES.md)</br>
