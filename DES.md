@@ -29,4 +29,5 @@ After mixing in the subkey, the block is divided into eight 6-bit pieces before 
 ###Straight P-Box
 Finally, the 32 outputs from the S-boxes are rearranged according to a fixed permutation, the P-box. This is designed so that, after permutation, each S-box's output bits are spread across 4 different S boxes in the next round.</br>
 </br>
+</br>
 back to [Encryption-Algorithm](https://github.com/wuzhiyi/Encryption-Algorithm)</br>
