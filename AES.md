@@ -42,3 +42,6 @@ During this operation, each column is transformed using a fixed matrix.</br>
 Matrix multiplication is composed of multiplication and addition of the entries. Entries are 8 bit bytes treated as coefficients of polynomial of order x^7. Addition is simply XOR. Mulitiplication is modulo irreducible polynomial x^8+x^4+x^3+x+1. If processed bit by bit then after shifting a conditional XOR with 0x1B should be performed if the shifted value is larger than 0xFF(overflow must be corrected by subtraction of generating polynomial). These are special cases of the usual multiplication in GF(2^8).</br>
 ###The AddRoundKey step
 In the **AddRoundKey** step, the subkey is combined with the state. For each round, a subkey is derived from the main key using Rijndael's key schedule; each subkey is the same size as the state. The subkey is added by combining each byte of the state with the corresponding byte of the subkey using bitwise XOR.</br>
+</br>
+</br>
+back to [Encryption-Algorithm](https://github.com/wuzhiyi/Encryption-Algorithm)</br>
