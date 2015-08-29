@@ -35,6 +35,7 @@ While performing the decryption, Inverse SubBytes step is used, which requires f
 The **ShiftRows** step operates on the rows of the state; it cyclically shifts the bytes in each row by a certain offset. For AES, the first row is left unchanged. Each byte of the second row is shifted one to the left. Similarly, the third and fourth rows are shifted by offsets of two and three respectively.</br>
 For blocks of sizes 128 bits and 192 bits, the shiting pattern is the same. Row n is shifted left circular by n-1 bytes. In this way, each colun of the output state of  the **ShiftRows** step is composed of bytes from each column of the input state. (Rijndael variants with a larger block size have slightly different offsets).</br>
 For a 256-bit block, the first row is unchanged and the shifting for the seconde, third and fourth row is 1 byte, 3 bytes and 4 bytes respectivley--this change only applies for the Rijndael cipher when used with a 256-bit block, as AES does not use 256-bit blocks. The importance of this step is to avoid the columns being linearly independent, in which case, AES degenerates into four independent block ciphers.</br>
+</br>
 ![img](https://cloud.githubusercontent.com/assets/9131176/9522666/72f29a82-4d08-11e5-9819-4ce53501ee4e.png)</br>
 
 ###The MixColumns step
