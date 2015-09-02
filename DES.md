@@ -26,7 +26,7 @@ The F-function, depicted in below, operates on half a block (32 bits) at a time 
 3. Substitution (S-Boxes)
 4. Permutation (Straight P-Box)
 
-<div align="center"><img src="https://cloud.githubusercontent.com/assets/9131176/9484147/de73f000-4bda-11e5-877e-cfefc2af7d39.png")</div>
+<div align="center"><img src="https://cloud.githubusercontent.com/assets/9131176/9484147/de73f000-4bda-11e5-877e-cfefc2af7d39.png"></div>
 
 ###Expansion P-Box
 The 32-bit half-block is expanded to 48 bits using the expansion permutation by duplicating half of the bits. The output consists of eight 6-bit (8 * 6 = 48 bits) pieces, each containing a copy of 4 corresponding input bits, plus a copy of the immediately adjacent bit from each of the input pieces to either side.</br>
