@@ -24,7 +24,7 @@ Each round consists of several processing steps, each containing four similar bu
 	2. ShiftRows
 	3. AddRoundKey
 
-![img](https://cloud.githubusercontent.com/assets/9131176/9522667/733b56e6-4d08-11e5-9f15-227f89e3d8d9.png)</br>
+<div align="center"><img src="https://cloud.githubusercontent.com/assets/9131176/9522667/733b56e6-4d08-11e5-9f15-227f89e3d8d9.png"></br></div>
 
 ###The SubBytes step
 In the **SubBytes** step, aech byte a(i,j) in the state matrix is replaced with a **SubByte** S(a(i,j)) using an 8-bit substitution box, the Rijndael S-box.</br>
@@ -36,7 +36,7 @@ The **ShiftRows** step operates on the rows of the state; it cyclically shifts t
 For blocks of sizes 128 bits and 192 bits, the shiting pattern is the same. Row n is shifted left circular by n-1 bytes. In this way, each colun of the output state of  the **ShiftRows** step is composed of bytes from each column of the input state. (Rijndael variants with a larger block size have slightly different offsets).</br>
 For a 256-bit block, the first row is unchanged and the shifting for the seconde, third and fourth row is 1 byte, 3 bytes and 4 bytes respectivley--this change only applies for the Rijndael cipher when used with a 256-bit block, as AES does not use 256-bit blocks. The importance of this step is to avoid the columns being linearly independent, in which case, AES degenerates into four independent block ciphers.</br>
 </br>
-![img](https://cloud.githubusercontent.com/assets/9131176/9522666/72f29a82-4d08-11e5-9819-4ce53501ee4e.png)</br>
+<div align="center"><img src="https://cloud.githubusercontent.com/assets/9131176/9522666/72f29a82-4d08-11e5-9819-4ce53501ee4e.png"></br></div>
 
 ###The MixColumns step
 In the **MixColumns** step step, the four bytes of each column of the state are combined using an invertible linear transformation. The **MixColumns** function takes four bytes as innput and outputs four bytes, where each input byte affects all four output bytes. Together with **ShiftRows**, **MixColumns** provides diffusion in the cipher.</br>
