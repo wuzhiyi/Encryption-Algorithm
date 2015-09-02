@@ -3,19 +3,19 @@
 DES is the archetypal block cipher--an algorithm that takes a fixed-length string of plaintext bits and transforms it through a series of complicated operations into another ciphertext bitstring of the same length. </br>
 In the case of DES, the block size is 64 bits. DES also uses a key to customize the transformation, so that decryption can supposedly only be performed by those who know the particular key used to encrypt. The key ostensibly consists of 64 bits; however, only 56 of these are actually used by the algorithm. Eight bits are used solely for checking parity, and are thereafter discarded. Hence the effective key length is 56 bits.</br>
 ###Structure Overview
-<div align="center">![img](https://cloud.githubusercontent.com/assets/9131176/9484153/e11d75b0-4bda-11e5-844f-1f346e6c39c2.png)
+<div align="center"><img src="https://cloud.githubusercontent.com/assets/9131176/9484153/e11d75b0-4bda-11e5-844f-1f346e6c39c2.png"><div>
 
 ###Structure
 The encryption process is made of two permutations (P-boxes) which we call initial and final permutations, and sixteen Feistel rounds.</br>
 
-<div align="center">![img](https://cloud.githubusercontent.com/assets/9131176/9484149/dea08d0e-4bda-11e5-838f-37189a106e81.png)</br>
+<div align="center">![img](https://cloud.githubusercontent.com/assets/9131176/9484149/dea08d0e-4bda-11e5-838f-37189a106e81.png)<div></br>
 
 Before the main rounds, the block is divided into two 32-bit halves and processed alternately; this criss-crossing is known as the Feistel scheme. The Feistel structure ensures that decryption and encryption are very similar processes--the only difference is that the subkeys are applied in the reverse order when decrypting. The rest of the algorithm is identical. This greatly simplifies implementation, particularly in hardware, as there is no need for separate encryption and decryption algorithms.(from wikipedia)</br>
 
 ###Rounds
 DES uses 16 rounds. Each round of DES is a Feistel cipher.</br>
 
-<div align="center">![img](https://cloud.githubusercontent.com/assets/9131176/9484150/deab572a-4bda-11e5-8d38-46f36f5b321f.png)
+<div align="center">![img](https://cloud.githubusercontent.com/assets/9131176/9484150/deab572a-4bda-11e5-8d38-46f36f5b321f.png)<div>
 
 ###Feistel(F) function
 The F-function, depicted in below, operates on half a block (32 bits) at a time and consists of four stages:
@@ -25,7 +25,7 @@ The F-function, depicted in below, operates on half a block (32 bits) at a time 
 3. Substitution (S-Boxes)
 4. Permutation (Straight P-Box)
 
-<div align="center">![img](https://cloud.githubusercontent.com/assets/9131176/9484147/de73f000-4bda-11e5-877e-cfefc2af7d39.png)
+<div align="center">![img](https://cloud.githubusercontent.com/assets/9131176/9484147/de73f000-4bda-11e5-877e-cfefc2af7d39.png)<div>
 
 ###Expansion P-Box
 The 32-bit half-block is expanded to 48 bits using the expansion permutation by duplicating half of the bits. The output consists of eight 6-bit (8 * 6 = 48 bits) pieces, each containing a copy of 4 corresponding input bits, plus a copy of the immediately adjacent bit from each of the input pieces to either side.</br>
