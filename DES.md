@@ -8,13 +8,12 @@ In the case of DES, the block size is 64 bits. DES also uses a key to customize 
 ###Structure
 The encryption process is made of two permutations (P-boxes) which we call initial and final permutations, and sixteen Feistel rounds.</br>
 
-<div align="center">![img](https://cloud.githubusercontent.com/assets/9131176/9484149/dea08d0e-4bda-11e5-838f-37189a106e81.png)</br></div>
+<div align="center"><img src="https://cloud.githubusercontent.com/assets/9131176/9484149/dea08d0e-4bda-11e5-838f-37189a106e81.png"></br></div>
 
 Before the main rounds, the block is divided into two 32-bit halves and processed alternately; this criss-crossing is known as the Feistel scheme. The Feistel structure ensures that decryption and encryption are very similar processes--the only difference is that the subkeys are applied in the reverse order when decrypting. The rest of the algorithm is identical. This greatly simplifies implementation, particularly in hardware, as there is no need for separate encryption and decryption algorithms.(from wikipedia)</br>
 
 ###Rounds
 DES uses 16 rounds. Each round of DES is a Feistel cipher.</br>
-
 
 <div align="center"><img src="https://cloud.githubusercontent.com/assets/9131176/9484150/deab572a-4bda-11e5-8d38-46f36f5b321f.png"></br></div>
 
